@@ -1,0 +1,40 @@
+<b>Q3. Make a form having</b>
+ <p>  A input for phone number,
+   A button to add another number labelled "Add another phone number"
+   A submit button
+  Upon clicking the "Add another phone number" Button, a new input field should be added to the
+  form dynamically. The purpose of this form is to get all the phone numbers that a person holds. If
+  the number of input fields for phone number is greater than 1 then, consider adding delete
+  buttons to each input field.
+  The "Submit" button should log an array to the console having all the phone numbers in a format
+  shown below :
+  
+ </p>
+
+<br><br><br><br>
+
+<input type="number" [(ngModel)]="numb" name="lname" placeholder="Enter a  Phone Number">
+<div *ngFor="let num of this.numArray;let i = index" style="display: flex;
+width: 18%;
+justify-content: space-between;" >
+  <input type="number" [(ngModel)]="numb1[i]"  placeholder="Enter a  Phone Number">
+<input type="submit" value="Delete" (click)="Delete(i)">
+
+</div>
+
+
+<br>
+<br>
+<br>
+
+<div style="display: flex;
+width: 18%;
+justify-content: space-between;">
+<input type="submit" value="Submit" (click)="submit()">
+
+<input type="submit" value="Add another phone number" (click)="Add(numField)">
+</div>
+
+<b style="color:red">{{this.heading}}</b>
+
+<h4>{{this.val}}</h4>
