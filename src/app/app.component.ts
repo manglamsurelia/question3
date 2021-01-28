@@ -13,6 +13,7 @@ export class AppComponent {
   value:any=[]
 val:any=[];
 heading:any;
+  numField:any;
 
   ngOnInit() {
     this.submit();
